@@ -2,6 +2,7 @@
     --all-title: #212121;
     --btn-color:#FFFFFF;
     --btn-background:#2196F3;
+    --timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -83,15 +84,19 @@ body {
 }
 .header-list {
     margin-left: 93px;
+    position: relative;
+    
 }
 .header-item {
+    
     margin-right: 50px;
 }
 .header-connect {
     margin-left: auto;
-    
 }
 .header-link {
+    position: relative;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -100,6 +105,23 @@ body {
 }
 .header-link.current {
     color: var(--btn-background);
+}
+.header-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: block;
+    height: 4px;
+    background: var(--btn-background);
+    border-radius: 2px;
+    opacity: 0;
+}
+.header-link.current::after {
+    opacity: 1;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
 }
 .header-link:hover, 
 .header-link:focus,
@@ -113,7 +135,7 @@ body {
 .footer-tel:focus {
     color: #2196F3;
     transition-duration:250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function:var(--timing-function);
 }
 .header-mail, .header-tel {
     font-weight: 500;
@@ -392,6 +414,9 @@ body {
 }
 .example-galery:hover {
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    transition-duration:250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .example-title-text {
     padding: 20px 24px;
@@ -432,19 +457,37 @@ body {
     transition-duration:250ms;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
-.overlay-text {
+.overlay {
     position: absolute;
-    width: 322px;
-    height: 168px;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 294px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--btn-background);
+    transform: translateY(100%);
+    transition: transform 250ms ease;
+}
+.overlay-text {
+    margin: 63px 24px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.61;    
     letter-spacing: 0.03em;
-    color: #FFFFFF;
-
+    color: var(--btn-color);
 }
 .overlay-box {
     position: relative;
+    overflow: hidden;
+    width: 370px;
+    height: 294px;
+}
+.overlay-box:hover .overlay {
+    transform: translateY(0);
+    transition-duration:250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Футер */
 .footer {
@@ -525,17 +568,6 @@ body {
     left: 0px;
     top: 0px;
     background: rgba(0, 0, 0, 0.2);
-/*     
-    width: 528px;
-    height: 581px;
-    left: 536px;
-    top: 221px;
-    
-    background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px; */
 }
 .backdrop.is-hidden {
     opacity: 0;
