@@ -568,10 +568,15 @@ body {
     left: 0px;
     top: 0px;
     background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
 }
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+    transform: scale(0.9) translate(-50%, -50%);
 }
 .modal {
     position: absolute;
@@ -579,14 +584,31 @@ body {
     height: 581px;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    transition: opacity 250ms var(--timing-function);
 }
+.modal-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 17px;
+   
+    right: 17px;
+    
+    
 
+}
+.modal-icon {
+    width: 11px;
+}
 
 
 
