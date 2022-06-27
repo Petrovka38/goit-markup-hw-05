@@ -105,6 +105,7 @@ body {
 }
 .header-link.current {
     color: var(--btn-background);
+    transition-duration:250ms;
 }
 .header-link::after {
     content: "";
@@ -117,6 +118,7 @@ body {
     background: var(--btn-background);
     border-radius: 2px;
     opacity: 0;
+
 }
 .header-link.current::after {
     opacity: 1;
@@ -134,7 +136,6 @@ body {
 .footer-tel:hover,
 .footer-tel:focus {
     color: #2196F3;
-    transition-duration:250ms;
     transition-timing-function:var(--timing-function);
 }
 .header-mail, .header-tel {
@@ -143,6 +144,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: #757575;
+    transition-duration:250ms;
 }
 .header-mail-icon {
     display: inline-block;
@@ -265,20 +267,20 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    opacity: 0;
+    /* opacity: 0; */
 }
-.about-foto:focus .about-desctop,
+/* .about-foto:focus .about-desctop,
 .about-foto:hover .about-desctop{
     opacity: 1;
     transition-duration:250ms;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 /* Блок команда */
 .team-section {
     background: #F5F4FA;
     padding-top: 93px;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
 .team-title {
     margin-bottom: 50px;
@@ -291,13 +293,14 @@ body {
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-}
-.team-people:hover,
-.team-people:focus {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    transition-duration:250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
+/* .team-people:hover,
+.team-people:focus {
+    transition-duration:250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);} */
+
 .team-description {
     padding-top: 30px;
 }   
@@ -340,6 +343,7 @@ body {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+    transition-duration:250ms;
 }
 .team-soc-icon {
     fill: rgba(175, 177, 184, 1);
@@ -347,13 +351,11 @@ body {
 .team-soc-link:focus, 
 .team-soc-link:hover {
     background-color: var(--btn-background);
-    transition-duration:250ms;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 } 
 .team-soc-link:focus .team-soc-icon,
 .team-soc-link:hover .team-soc-icon {
     fill: #FFFFFF;
-    transition-duration:250ms;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-title {
@@ -374,17 +376,16 @@ body {
     height: 100%;
     align-items: center;
     justify-content: center;
+    transition-duration:250ms;
 } 
 .client-link:hover,
 .client-link:focus {
     border: 1px solid var(--btn-background);
-    transition-duration:250ms;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:hover .client-icon,
 .client-link:focus .client-icon {
     fill: var(--btn-background);
-    transition-duration:250ms;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-icon {
@@ -411,10 +412,12 @@ body {
     margin-left: 30px;
     margin-bottom: 30px;
     border: 1px solid #EEEEEE;  
+    transition-duration:250ms;
 }
 .example-galery:hover {
-    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
-    transition-duration:250ms;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 
 }
@@ -449,26 +452,25 @@ body {
 .btn .hero-btn {
     color: var(--all-title);
     background-color:var(--btn-color);
+    transition-duration:250ms;
 }
 .btn:hover, .btn:focus {
     color:var(--btn-color) ;
     background-color: var(--btn-background);
     box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.3);
-    transition-duration:250ms;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 370px;
-    height: 294px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--btn-background);
     transform: translateY(100%);
     transition: transform 250ms ease;
+    transition-duration:250ms;
 }
 .overlay-text {
     margin: 63px 24px;
@@ -484,9 +486,8 @@ body {
     width: 370px;
     height: 294px;
 }
-.overlay-box:hover .overlay {
+.example-galery:hover .overlay {
     transform: translateY(0);
-    transition-duration:250ms;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Футер */
@@ -518,6 +519,7 @@ body {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    transition-duration:250ms;
 }
 .footer-container {
     display: flex;
@@ -554,6 +556,7 @@ body {
     align-items: center;
     fill: rgba(255, 255, 255, 1);
     box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.3);
+    transition-duration:250ms;
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
@@ -563,7 +566,7 @@ body {
 }
 .backdrop {
     position: fixed;
-    width: 1600px;
+    width: 100%;
     height: 1024px;
     left: 0px;
     top: 0px;
@@ -600,11 +603,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 17px;
-   
     right: 17px;
-    
-    
-
 }
 .modal-icon {
     width: 11px;
