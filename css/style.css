@@ -448,11 +448,12 @@ body {
     letter-spacing: 0.03em;
     cursor: pointer;
     padding: 6px 22px;
+    transition-duration:250ms;
 }
 .btn .hero-btn {
     color: var(--all-title);
     background-color:var(--btn-color);
-    transition-duration:250ms;
+    
 }
 .btn:hover, .btn:focus {
     color:var(--btn-color) ;
