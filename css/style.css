@@ -103,7 +103,7 @@ body {
     letter-spacing: 0.02em;
     color: #212121; 
     transition-duration:250ms;
-    transition-timing-function:var(--timing-function);
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link.current {
     color: var(--btn-background);
@@ -146,7 +146,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: #757575;
-    transition-duration:2500ms;
+    transition-duration:250ms;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -362,6 +362,8 @@ body {
 .team-soc-link:focus, 
 .team-soc-link:hover {
     background-color: var(--btn-background);
+    transition-duration:250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
     
 } 
 .team-soc-link:focus .team-soc-icon,
@@ -397,7 +399,8 @@ body {
 .client-link:hover,
 .client-link:focus {
     border: 1px solid var(--btn-background);
-    
+    transition-duration:250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:hover .client-icon,
 .client-link:focus .client-icon {
